@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from .models import Message
+from django.forms import ModelForm
 
 class RegisterForm(UserCreationForm):
     class Meta:
@@ -11,4 +13,11 @@ class RegisterForm(UserCreationForm):
             'username',
             'password1',
             'password2',
+        ]
+
+class MessageForm(ModelForm):
+    class Meta:
+        model = Message
+        fields = [
+            'content',
         ]
