@@ -6,7 +6,20 @@
     <title>Home</title>
 </head>
 <body>
-    hello {{ request.user }}
-    <a href="{% url 'logout' %}">Logout</a>
+    Hello {{ request.user }}
+    <a style="margin-left: 90%; " href="{% url 'logout' %}">Logout</a>
+    
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Send</button>
+    </form>
 </body>
 </html>

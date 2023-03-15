@@ -1,19 +1,36 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
-from .forms import RegisterForm
+from .forms import RegisterForm, MessageForm
 from django.contrib import messages
+
 
 # Create your views here.
 @login_required(login_url='login')
 def home(request):
-    context = {}
+    form = MessageForm()        # Creates a message form
+
+    if request.method == "POST":
+        form = MessageForm(request.POST)
+
+        if form.is_valid():
+            form.instance.sender = request.user
+            form.save()
+            form = MessageForm()
+            messages.success(request, 'Message sent!!')
+    context = {
+        'form': form
+    }
     return render(request, 'home.html', context)
 
 def register_page(request):
-    form = RegisterForm()
+    form = RegisterForm()       # Creates a user registration form
+
+    # Collect the data from user
     if request.method == "POST":
         form = RegisterForm(request.POST)
+
+        # If data is vaild as per requirement then the user is registered successfully
         if form.is_valid():
             form.save()
             messages.success(request, 'Account Created Successfully!!')
