@@ -20,7 +20,9 @@ a:hover {
     font-weight: bold;
 }
 
-
+.input-group-text {
+    width: 3.5rem;
+}
 
 
 /* ID */

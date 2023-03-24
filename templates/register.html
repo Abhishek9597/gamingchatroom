@@ -17,62 +17,86 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/c5df6e86e3.js" crossorigin="anonymous"></script>
+    
 </head>
 <body id="register-body">
 
     <form action="" method="post">
         <h1 class="auth-heading my-5">Register</h1>
 
-        <div class="row g-5">
+        <div class="row g-5 mb-5">
             <div class="col-md">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Name" required>
-                <label for="floatingInputGrid">First Name</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-keyboard fa-2xl"></i></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Name" required>
+                  <label for="floatingInputGrid">First Name</label>
+                </div>
               </div>
             </div>
 
             <div class="col-md">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Name" required>
-                <label for="floatingInputGrid">Last Name</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-keyboard fa-2xl"></i></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Name" required>
+                  <label for="floatingInputGrid">Last Name</label>
+                </div>
               </div>
             </div>
 
             <div class="col-md">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-envelope fa-2xl"></i></span>
                 <div class="form-floating">
                   <input type="email" class="form-control" id="floatingInputGrid" placeholder="Name@email.com" required>
                   <label for="floatingInputGrid">Email</label>
                 </div>
+              </div>
             </div>
 
         </div>
 
-        <div class="row g-5 my-5">
+        <div class="row g-5">
             <div class="col-md">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-user fa-2xl"></i></span>
                 <div class="form-floating">
                   <input type="text" class="form-control" id="floatingInputGrid" placeholder="Username" required>
                   <label for="floatingInputGrid">Username</label>
                 </div>
+              </div>
             </div>
 
             <div class="col-md">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-lock fa-2xl"></i></span>
                 <div class="form-floating">
                   <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                   <label for="floatingPassword">Password</label>
                 </div>
+              </div>
             </div>
 
             <div class="col-md">
+                <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-lock fa-2xl"></i></span>
                 <div class="form-floating">
                   <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                   <label for="floatingPassword">Confirm Password</label>
                 </div>
+              </div>
             </div>
         </div>
         <br>
-        <button id="auth-btn" class="btn btn-outline-primary " type="submit">Register</button>
+        <div class="container mt-4">
+          <button id="auth-btn" class="btn btn-outline-primary " type="submit">Register</button>
+        </div>
 
-        <div class="container my-3">
+        <div class="container my-5">
             <p>Already have a account &nbsp;&nbsp;
             <a class="link-primary" href="{% url 'login' %}">Login</a></p>
         </div>
