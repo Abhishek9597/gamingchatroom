@@ -25,6 +25,7 @@
 <body id="register-body">
 
     <form action="" method="post">
+      {% csrf_token %}
         <h1 class="auth-heading my-5">Register</h1>
 
         <div class="row g-5 mb-5">
@@ -32,7 +33,7 @@
               <div class="input-group">
                 <span class="input-group-text"><i class="fa-solid fa-keyboard fa-2xl"></i></span>
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Name" required>
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Name" name="first_name" required>
                   <label for="floatingInputGrid">First Name</label>
                 </div>
               </div>
@@ -42,7 +43,7 @@
               <div class="input-group">
                 <span class="input-group-text"><i class="fa-solid fa-keyboard fa-2xl"></i></span>
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Name" required>
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Name" name="last_name" required>
                   <label for="floatingInputGrid">Last Name</label>
                 </div>
               </div>
@@ -52,7 +53,7 @@
               <div class="input-group">
                 <span class="input-group-text"><i class="fa-solid fa-envelope fa-2xl"></i></span>
                 <div class="form-floating">
-                  <input type="email" class="form-control" id="floatingInputGrid" placeholder="Name@email.com" required>
+                  <input type="email" class="form-control" id="floatingInputGrid" placeholder="Name@email.com" name="email" required>
                   <label for="floatingInputGrid">Email</label>
                 </div>
               </div>
@@ -65,7 +66,7 @@
               <div class="input-group">
                 <span class="input-group-text"><i class="fa-solid fa-user fa-2xl"></i></span>
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Username" required>
+                  <input type="text" class="form-control" id="floatingInputGrid" placeholder="Username" name="username" required>
                   <label for="floatingInputGrid">Username</label>
                 </div>
               </div>
@@ -75,7 +76,7 @@
               <div class="input-group">
                 <span class="input-group-text"><i class="fa-solid fa-lock fa-2xl"></i></span>
                 <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password1" required>
                   <label for="floatingPassword">Password</label>
                 </div>
               </div>
@@ -85,7 +86,7 @@
                 <div class="input-group">
                 <span class="input-group-text"><i class="fa-solid fa-lock fa-2xl"></i></span>
                 <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password2" required>
                   <label for="floatingPassword">Confirm Password</label>
                 </div>
               </div>
