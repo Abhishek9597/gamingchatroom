@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm, MessageForm
@@ -35,6 +35,9 @@ def register_page(request):
             form.save()
             messages.success(request, 'Account Created Successfully!!')
             return redirect('login')
+        
+        else:
+            messages.error(request, "Please Check Entered Information")
         
     context = {
         'form': form

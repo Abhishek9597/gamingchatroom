@@ -28,7 +28,6 @@
         {{ form }}
         <button type="submit">Reset</button>
     </form> {% endcomment %}
-
     <form action="" method="post">
         {% csrf_token %}
         <h1 class="auth-heading my-5">Create New Password</h1>
@@ -37,7 +36,7 @@
             <div class="input-group mb-5">
                 <span class="input-group-text"><i class="fa-solid fa-lock fa-2xl"></i></span>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password1" required>
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="new_password1" required>
                     <label for="floatingPassword">Password</label>
                 </div>
             </div>
@@ -45,7 +44,7 @@
             <div class="input-group">
                 <span class="input-group-text"><i class="fa-solid fa-lock fa-2xl"></i></span>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password2" required>
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="new_password2" required>
                     <label for="floatingPassword">Confirm Password</label>
                 </div>
             </div>
